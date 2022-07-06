@@ -1,0 +1,74 @@
+﻿@model BookStore_MVC.Models.Customer
+@{
+    ViewData["Title"] = "Customer";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6 d-flex justify-content-center white-text-color box-shadow-yellow">
+            <h2 class="bigger-size-header">Welcome to BookStore rental</h2>
+            <div class="jus-content">
+            <p class="p">If you are a new customer, please enter ur information here. Or see already existing customers</p>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        
+        <div class="col white-text-color">
+            @using (Html.BeginForm("RegisterCustomer","Customer",FormMethod.Post))
+            {
+                <div class="form-group bigger-p">
+                    @Html.LabelFor(model => model.FirstName, "First Name")
+                    @Html.TextBoxFor(model => model.FirstName,new { @class="form-control"} )
+                </div>
+
+                <div class="form-group bigger-p">
+                    @Html.LabelFor(model => model.LastName, "Last Name")
+                    @Html.TextBoxFor(model => model.LastName,new { @class="form-control"} )
+                </div>
+
+                <div class="form-group bigger-p">
+                    @Html.LabelFor(model => model.PhoneNumber, "Phonenumber")
+                    @Html.TextBoxFor(model => model.PhoneNumber,new {@class="form-control",@type="number"})
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="Register" />
+                
+            }
+            
+            
+            @*   <div class="mb-3 white-text-color">
+                <label for="formGroupExampleInput" class="form-label">Enter firstname</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="like. Gösta">
+            </div>*@
+        </div>
+     
+   @*     <div class="col">
+            <div class="mb-3 white-text-color">
+                <label for="formGroupExampleInput" class="form-label">Enter LastName</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="like. Knutsson">
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="mb-3 white-text-color">
+                <label for="formGroupExampleInput" class="form-label">Enter PhoneNumber</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="like. 0701122333">
+            </div>
+        </div>*@
+    </div>
+    <br/>
+    <div class="row">
+    
+       @* <div class="col d-flex justify-content-center jus-content">
+            <a class="btn btn-primary" asp-action="">Register</a>
+        </div>*@
+
+        <div class="col d-flex justify-content-center jus-content">
+            <a class="btn btn-primary padding-item" asp-action="CustomerList">See customers</a>
+        </div>
+     
+    </div>
+</div>

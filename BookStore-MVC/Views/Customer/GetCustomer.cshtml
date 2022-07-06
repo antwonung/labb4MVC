@@ -1,0 +1,36 @@
+﻿@model CustomerViewModel
+
+
+<table class="table white-text-color">
+  <thead>
+    <tr>
+      <th scope="col">@Html.DisplayNameFor(model => model.customerViewMdl.FirstOrDefault().CustomerId)</th>
+      <th scope="col">@Html.DisplayNameFor(model => model.customerViewMdl.FirstOrDefault().FirstName)</th>
+      <th scope="col">@Html.DisplayNameFor(model => model.customerViewMdl.FirstOrDefault().LastName)</th>
+      <th scope="col">@Html.DisplayNameFor(model => model.customerViewMdl.FirstOrDefault().PhoneNumber)</th>
+    </tr>
+  </thead>
+  <tbody>
+        @if(Model.customer != null)
+        {
+         <tr>
+            <td>@Model.customer.CustomerId</td>
+            <td>@Model.customer.FirstName</td>
+            <td>@Model.customer.LastName</td>
+            <td>@Model.customer.PhoneNumber</td>
+           
+        </tr>
+            
+        }
+  </tbody>
+</table>
+     @if(Model.customer == null)
+        {
+            <p class="white-text-color">Couldnt find any customer with that id..</p>
+        }
+        <a class="btn btn-primary mb-2" asp-action="SearchCustomer">Get back</a>
+
+
+
+ 
+

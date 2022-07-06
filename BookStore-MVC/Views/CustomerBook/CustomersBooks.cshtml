@@ -1,0 +1,28 @@
+﻿@model BookStore_MVC.ViewModels.CustomerBookViewModel
+
+<table class="table white-text-color bigger-p">
+  <thead>
+    <tr>
+      <th class="col-md-2" scope="col">First Name</th>
+      <th class="col-md-2" scope="col">Last Name</th>
+      <th class="col-md-2" scope="col">Phonenumber</th>
+      <th class="col-md-2" scope="col">Book Title</th>
+      <th class="col-md-2" scope="col">Book Author</th>
+    </tr>
+  </thead>
+  <tbody>
+        
+        @foreach(var item in Model.customerbooks)
+        {
+            <tr>
+	            <td>@item.customer.FirstName</td>
+	            <td>@item.customer.LastName</td>
+	            <td>@item.customer.PhoneNumber</td>
+	            <td>@item.books.BookTitle</td>
+	            <td>@item.books.BookAuthor</td>
+            </tr>
+}
+
+    </tbody>
+</table>
+<a  class="btn btn-primary" asp-controller="Customer" asp-action="CustomerList">Get back</a>

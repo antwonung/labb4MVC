@@ -1,0 +1,22 @@
+﻿@model CustomerViewModel
+
+<div class="container white-text-color">
+	<div class="row">
+		<div class="col d-flex justify-content-center white-text-color jus-content">
+			<h3>Search Customer by id:</h3>
+		</div>
+		<div class="col d-flex justify-content-center white-text-color">
+			   
+			<div class="mb-3 jus-content">
+				<form action="GetCustomer" method="post">
+					<input class="form-control mb-2" type="number" name="customerID" id="formGroupCustomerId" placeholder="like. 1">
+					<input class="btn btn-primary jus-content" type="submit" value="Get customer" />
+				</form>
+			</div>
+			
+		</div>
+		<div class="col"></div>
+	
+	</div>
+
+</div>

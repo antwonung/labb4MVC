@@ -1,0 +1,29 @@
+﻿@model CustomerViewModel
+
+<table class="table white-text-color bigger-p">
+  <thead>
+    <tr>
+      <th class="col-md-2" scope="col">@Html.DisplayNameFor(model => model.customerViewMdl.FirstOrDefault().CustomerId)</th>
+      <th class="col-md-2" scope="col">@Html.DisplayNameFor(model => model.customerViewMdl.FirstOrDefault().FirstName)</th>
+      <th class="col-md-2" scope="col">@Html.DisplayNameFor(model => model.customerViewMdl.FirstOrDefault().LastName)</th>
+      <th class="col-md-2" scope="col">@Html.DisplayNameFor(model => model.customerViewMdl.FirstOrDefault().PhoneNumber)</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(var customer in Model.customerViewMdl)
+        {
+         <tr>
+            <td>@customer.CustomerId</td>
+            <td>@customer.FirstName</td>
+            <td>@customer.LastName</td>
+            <td>@customer.PhoneNumber</td>
+            <td>@Html.ActionLink("Edit","Edit",new {id=customer.CustomerId})</td>
+            <td>@Html.ActionLink("Delete","DeleteCustomer",new {id=customer.CustomerId})</td>
+            <td>@Html.ActionLink("Customers books","CustomersBooks","CustomerBook",new {id=customer.CustomerId}, null)</td>
+        </tr>
+        }
+        
+  
+    </tbody>
+</table>
+<a  class="btn btn-primary" asp-action="Customer">Get back</a>

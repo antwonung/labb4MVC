@@ -1,0 +1,109 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.jus-content{
+    display:flex;
+    align-items:center;
+}
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+.navbar-css {
+    background-color: papayawhip;
+}
+
+body {
+    background-image: url('../Pictures/stonewall.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.bigger-p{
+    font-size:18px;
+}
+.bigger-size-header{
+    font-size:50px;
+}
+.family-font {
+    font-family: 'Bebas Neue', cursive;
+}
+.box-shadow-yellow {
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px 15px white;
+}
+
+.white-text-color {
+    text-align: left;
+    color: whitesmoke;
+    text-decoration:underline;
+}
+
+.p{
+    font-size: 15px;
+}
+
+
+.border{
+    border-bottom: 5px solid black;
+    border-radius:2px;
+}
+.box-shadow-header {
+    box-shadow: 0px 20px 30px black;
+}
+.box-shadow-footer {
+    box-shadow: 0px 20px 20px 30px black;
+}
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+.border {
+    border-bottom: 5px solid black;
+    border-radius: 2px;
+}
+
+.box-shadow {
+    box-shadow: 0px 20px 30px black;
+}
+
+
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
